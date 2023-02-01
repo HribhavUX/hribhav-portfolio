@@ -18,7 +18,6 @@ export default function About(){
         return (
         <div className='w-full bg-[#15151A] z-10 overflow-x-clip'>
             <div className='relative w-full flex flex-col items-center bg-[#23232D]'>
-
                 <Navbar name = {AboutName} width={'w-46'}/>
                 <SocialMediaNavbar/>
                 <Music_and_scroll_control_bar />
