@@ -1,6 +1,7 @@
 import profile_circle from '../../Assets/profile_circle.png'
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import styles from './who.module.css';
+import {useScroll} from "framer-motion";
 
 export default function Who_am_I() {
     useEffect(() => {
@@ -41,8 +42,19 @@ export default function Who_am_I() {
             }
         });
     } , []);
+    const { scrollYProgress } = useScroll()
+    const [revealFactor, setRevealFactor] = useState(0)
+
+    useEffect(() => {
+        return scrollYProgress.onChange(() => {
+          setRevealFactor(scrollYProgress.current - 0.5)
+          console.log(scrollYProgress.current - 0.5, ' is something6')
+        })
+    }, [])
     return (
-        <div className='flex w-full justify-center bg-[#15151A] py-32 mt-44 overflow-y-clip'>
+        <div className='flex w-full sticky top-0 justify-center bg-[#15151A] pt-12 pb-12 z-20' style={{
+                zIndex: `${(revealFactor >= 0.5) ? 23 : 22}`,
+            }}>
             <div id='who_am_i' className='flex w-[74%]'>
                 <div className='flex pl-20 mr-5 w-[30rem] flex-col justify-center'>
                     <p className='text-[2.5rem] pb-10 font-PoB text-white'>

@@ -20,8 +20,10 @@ export default function Rozgaar(props) {
         })
     }, [])
     return (
-        <div className='w-full sticky top-0 flex justify-center pb-20' style={{
-            zIndex: `${(revealFactor > 0.21) ? 21 : 19}`,
+        <div className='w-full sticky top-0 flex justify-center pb-[30rem]' style={{
+            zIndex: `${(revealFactor > 0.101532) ? 21 : 19}`,
+            filter: `blur(${(((revealFactor - 0.115)<0)?((revealFactor-0.115)*(-200)):((revealFactor-0.145>0)?((revealFactor-0.145)*50):0))}rem)`,
+
         }}>
             <div className='absolute w-full z-0'>
                 <img src={rozgaar_background} className='w-full' alt='memboro_background'/>

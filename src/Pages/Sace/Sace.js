@@ -33,10 +33,11 @@ export default function Sace(props){
         })
     }, [])
     return(
-        <div className='w-full'>
-            <div className='w-full flex justify-center items-center px-20' style={{
-            zIndex: `${(revealFactor > 0.23) ? 22 : 19}`,
-        }}>
+        <div className='w-full sticky top-28 pb-[34rem] mb-60 flex ' style={{
+                zIndex: `${(revealFactor > 0.2760) ? 22 : 19}`,
+                filter: `blur(${(((revealFactor - 0.34)<0)?((revealFactor-0.31)*(-100)):0)}rem)`,
+            }}>
+            <div className='w-full  flex justify-center items-center px-20' >
                 <div className='absolute w-full z-0'>
                     <img src={Sace_background1} className='w-full' alt='sace background'/>
                 </div>
