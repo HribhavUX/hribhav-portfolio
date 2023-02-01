@@ -1,0 +1,102 @@
+import MagnidVR_background1 from "../../Assets/MagnidVR_background1.svg";
+import MagnidVR_background2 from "../../Assets/MagnidVR_background2.png";
+import MagnidVR_background3 from "../../Assets/MagnidVR_background3.png";
+import MagnidVR_background4 from "../../Assets/MagnidVR_background4.png";
+import {useEffect, useState} from "react";
+import {useTransform, motion, useScroll} from 'framer-motion';
+export default function MagnidVR(props) {
+    const xposition1 = useTransform(props.x,[0,2000],[0,40]);
+    const xposition2 = useTransform(props.x,[0,2000],[0,60]);
+    const xposition3 = useTransform(props.x,[0,2000],[0,80]);
+
+    const yposition1 = useTransform(props.y,[0,3000],[0,10]);
+    const yposition2 = useTransform(props.y,[0,3000],[-100,20]);
+    const yposition3 = useTransform(props.y,[0,3000],[-10,60]);
+    const [windowSize, setWindowSize] = useState(0);
+    useEffect(() => {
+        setWindowSize(window.innerWidth);
+    }, []);
+    const { scrollYProgress } = useScroll()
+    const [revealFactor, setRevealFactor] = useState(0)
+
+    useEffect(() => {
+        return scrollYProgress.onChange(() => {
+          setRevealFactor(scrollYProgress.current - 0.5)
+          console.log(scrollYProgress.current - 0.5, ' is something')
+        })
+    }, [])
+    return(
+        <div className='w-full sticky top-[0vh] flex justify-center pb-96 px-0 h-full'
+            style={{
+                // zIndex: "20",
+                zIndex: `${(revealFactor > 0.06) ? 20 : 19}`,
+                // filter: `blur(${(revealFactor > 0.06 && revealFactor < 0.16) ? (0.06 - revealFactor)*100 : ((revealFactor<0.08)?0:(revealFactor*4))}rem)`,
+            }}
+        >
+            <div className='absolute w-full z-0'>
+                <img src={MagnidVR_background1} className='w-full' alt='magnidVR'/>
+            </div>
+            <div className='w-6/12 pl-48 flex flex-col justify-center z-30 pt-[4.5rem]'>
+                <div className='w-full'>
+                    <p className='text-white w-full font-Sgb text-[2.65rem] pt-20'>
+                        Magnid VR
+                    </p>
+                    <p className='text-white w-full font-Sgr text-sm pt-0'>
+                        Helps organizations plan and host events using VR technology to enhance the event experience for attendees and make it more interactive, engaging, and immersive.
+                    </p>
+                    <p className='text-white w-1/2 font-PoB text-base pt-10 pb-1.5'>
+                        My Role
+                    </p>
+                    <p className='text-sm text-white w-1/2 font-PoR'>
+                        UX Designer | Unity Developer
+                    </p>
+                    <div className='flex w-full pt-14 justify-start pr-[0rem] flex-wrap'>
+                        <div className='font-PoM flex z-20 bg-[#6900BB] min-w-fit text-white text-sm px-4 mr-5 py-1 my-1 rounded-xl items-center justify-center'>
+                            Virtual Reality
+                        </div>
+                        <div className='font-PoM flex z-20 bg-[#6900BB] min-w-fit text-white text-sm px-6 mr-5 py-1 my-1  rounded-xl items-center justify-center'>
+                            Metaverse
+                        </div>
+                        <div className='font-PoM flex z-20 bg-[#E7018B] min-w-fit text-white text-sm px-7 py-1 my-1 rounded-xl items-center justify-center'>
+                            Miro
+                        </div>
+                    </div>
+                    <div className='flex w-full py-1 justify-start flex-wrap'>
+                        <div className='font-PoM flex z-20 my-1 bg-[#6900BB] min-w-fit text-white text-sm px-5 mr-5 py-1 rounded-xl items-center justify-center'>
+                            Event Curation
+                        </div>
+                        <div className='font-PoM flex z-20 my-1 bg-[#E7018B] min-w-fit text-white text-sm px-5 mr-5 py-1 rounded-xl items-center justify-center'>
+                            Oculus
+                        </div>
+                        <div className='font-PoM flex z-20 my-1 bg-[#E7018B] min-w-fit text-white text-sm px-5 mr-5 py-1 rounded-xl items-center justify-center'>
+                            Figma
+                        </div>
+                        <div className='font-PoM flex z-20 my-1 bg-[#E7018B] min-w-fit text-white text-sm px-7 py-1 rounded-xl items-center justify-center'>
+                            Unity
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='w-[40%] pl-0 flex flex-col justify-center items-center'>
+                <motion.div className='absolute w-[26%] flex justify-center items-center mt-28 z-10' style={{
+                    translateX:((windowSize > 1024) ? xposition1 : 0),
+                    translateY:((windowSize > 1024) ? yposition1 : 0),
+                  }}>
+                    <img src={MagnidVR_background2} className='w-[100%]'/>
+                </motion.div>
+                <motion.div className='absolute mr-[20vw] w-[20%] -mt-[10vw] flex justify-center items-center z-0' style={{
+                    translateX:((windowSize > 1024) ? xposition2 : 0),
+                    translateY:((windowSize > 1024) ? yposition2 : 0),
+                  }}>
+                    <img src={MagnidVR_background3} className='w-[100%]'/>
+                </motion.div>
+                <motion.div className='absolute ml-[12.5vw] w-[16%] mt-[8vw]  flex flex-col justify-center items-center z-10' style={{
+                    translateX:((windowSize > 1024) ? xposition3 : 0),
+                    translateY:((windowSize > 1024) ? yposition3 : 0),
+                  }}>
+                    <img src={MagnidVR_background4} className='w-[100%]'/>
+                </motion.div>
+            </div>
+        </div>
+    )
+}
