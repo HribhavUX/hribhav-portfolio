@@ -1,7 +1,7 @@
 import rozgaar_background from '../../Assets/rozgaar_background.png'
 import rozgaar_phone_ui from '../../Assets/rozgaar_phone_ui.png'
 import {useEffect, useState} from "react";
-import {useTransform, useMotionValue, motion, useScroll} from 'framer-motion';
+import {useTransform, motion, useScroll} from 'framer-motion';
 
 export default function Rozgaar(props) {
     const xposition1 = useTransform(props.x,[0,5000],[-40,100]);
@@ -14,11 +14,23 @@ export default function Rozgaar(props) {
     const [revealFactor, setRevealFactor] = useState(0)
 
     useEffect(() => {
-        return scrollYProgress.onChange(() => {
-          setRevealFactor(scrollYProgress.current - 0.5)
-          console.log(scrollYProgress.current - 0.5, ' is something')
-        })
-    }, [])
+        function updateOpacity() {
+            setRevealFactor(scrollYProgress.current - 0.5)
+            console.log(scrollYProgress.current - 0.5, ' is something')
+        }
+
+        const unsubscribeY = scrollYProgress.on("change", updateOpacity)
+        // const unsubscribeY = y.on("change", updateOpacity)
+
+        return () => {
+          // unsubscribeX()
+          unsubscribeY()
+        }
+        // return scrollYProgress.onChange(() => {
+        //   setRevealFactor(scrollYProgress.current - 0.5)
+        //   console.log(scrollYProgress.current - 0.5, ' is something')
+        // })
+    }, [scrollYProgress])
     return (
         <div className='w-full sticky top-0 flex justify-center pb-[30rem]' style={{
             zIndex: `${(revealFactor > 0.101532) ? 21 : 19}`,

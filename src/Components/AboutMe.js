@@ -7,7 +7,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 function useForceUpdate() {
   const [value, setValue] = useState(0); // integer state
   return () => setValue(value => value + 1); // update state to force render
-
 }
 export default function AboutMe() {
   let text;
@@ -23,23 +22,11 @@ export default function AboutMe() {
   }
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    // console.log("UseEffect ran");
     text = new SplitType(".text-fill-on-scroll-content", { types: "lines,words" })
     appendLinemask();
     animate();
-
   }, [])
-  // const runSplit = () => {
-  //   // if (!text) {
-  //   //   return;
-  //   // }
-  //   // animate();
 
-  //   // text.revert();
-  //   // text = new SplitType(".text-fill-on-scroll-content", { types: "lines,words" })
-  //   // appendLinemask();
-  //   const a = useForceUpdate();
-  // }
 
   const animate = () => {
     let collection = document.getElementsByClassName("line");
@@ -47,8 +34,6 @@ export default function AboutMe() {
       const element = collection[i];
       let triggerElement = element
       let targetElement = element.getElementsByClassName('line-mask')
-      // console.log(targetElement);
-      // console.log(element);
       let tl = gsap.timeline(
         {
           scrollTrigger: {
@@ -63,7 +48,6 @@ export default function AboutMe() {
         width: "0%",
         duration: 1
       })
-
     }
   }
 

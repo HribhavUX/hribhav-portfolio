@@ -20,11 +20,23 @@ export default function MagnidVR(props) {
     const [revealFactor, setRevealFactor] = useState(0)
 
     useEffect(() => {
-        return scrollYProgress.onChange(() => {
-          setRevealFactor(scrollYProgress.current - 0.5)
-          console.log(scrollYProgress.current - 0.5, ' is something')
-        })
-    }, [])
+        function updateOpacity() {
+            setRevealFactor(scrollYProgress.current - 0.5)
+            console.log(scrollYProgress.current - 0.5, ' is something')
+        }
+
+        const unsubscribeY = scrollYProgress.on("change", updateOpacity)
+        // const unsubscribeY = y.on("change", updateOpacity)
+
+        return () => {
+          // unsubscribeX()
+          unsubscribeY()
+        }
+        // return scrollYProgress.onChange(() => {
+        //   setRevealFactor(scrollYProgress.current - 0.5)
+        //   console.log(scrollYProgress.current - 0.5, ' is something')
+        // })
+    }, [scrollYProgress])
     return(
         <div className='w-full sticky top-[0vh] flex justify-center pb-96 px-0 h-full'
             style={{
@@ -83,19 +95,19 @@ export default function MagnidVR(props) {
                     translateX:((windowSize > 1024) ? xposition1 : 0),
                     translateY:((windowSize > 1024) ? yposition1 : 0),
                   }}>
-                    <img src={MagnidVR_background2} className='w-[100%]'/>
+                    <img src={MagnidVR_background2} className='w-[100%]' alt='magnid background 2'/>
                 </motion.div>
                 <motion.div className='absolute mr-[20vw] w-[20%] -mt-[10vw] flex justify-center items-center z-0' style={{
                     translateX:((windowSize > 1024) ? xposition2 : 0),
                     translateY:((windowSize > 1024) ? yposition2 : 0),
                   }}>
-                    <img src={MagnidVR_background3} className='w-[100%]'/>
+                    <img src={MagnidVR_background3} className='w-[100%]' alt='magnid background 3'/>
                 </motion.div>
                 <motion.div className='absolute ml-[12.5vw] w-[16%] mt-[8vw]  flex flex-col justify-center items-center z-10' style={{
                     translateX:((windowSize > 1024) ? xposition3 : 0),
                     translateY:((windowSize > 1024) ? yposition3 : 0),
                   }}>
-                    <img src={MagnidVR_background4} className='w-[100%]'/>
+                    <img src={MagnidVR_background4} className='w-[100%]' alt='magnid background 4'/>
                 </motion.div>
             </div>
         </div>

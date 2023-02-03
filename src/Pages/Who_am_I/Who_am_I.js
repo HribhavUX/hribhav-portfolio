@@ -46,11 +46,23 @@ export default function Who_am_I() {
     const [revealFactor, setRevealFactor] = useState(0)
 
     useEffect(() => {
-        return scrollYProgress.onChange(() => {
-          setRevealFactor(scrollYProgress.current - 0.5)
-          console.log(scrollYProgress.current - 0.5, ' is something6')
-        })
-    }, [])
+        function updateOpacity() {
+            setRevealFactor(scrollYProgress.current - 0.5)
+            console.log(scrollYProgress.current - 0.5, ' is something6')
+        }
+
+        const unsubscribeY = scrollYProgress.on("change", updateOpacity)
+        // const unsubscribeY = y.on("change", updateOpacity)
+
+        return () => {
+          // unsubscribeX()
+          unsubscribeY()
+        }
+        // return scrollYProgress.onChange(() => {
+        //   setRevealFactor(scrollYProgress.current - 0.5)
+        //   console.log(scrollYProgress.current - 0.5, ' is something')
+        // })
+    }, [scrollYProgress])
     return (
         <div className='flex w-full sticky top-0 justify-center bg-[#15151A] pt-12 pb-12 z-20' style={{
                 zIndex: `${(revealFactor >= 0.5) ? 23 : 22}`,

@@ -1,6 +1,6 @@
 import music_scroll_control from '../../Assets/music_scroll_control.svg'
 
-export default function Music_and_scroll_control_bar() {
+export default function MusicAndScrollControlBar() {
     return (
         <div className='w-full flex h-full fixed mt-0 z-10'>
             <div className='w-full p-0 -mt-8 flex flex-col justify-center items-end text-white font-PoR'>

@@ -1,8 +1,8 @@
 import memboro_background from '../../Assets/memboro_background.png'
 import memboro_background_layer1 from '../../Assets/memboro_background_layer1.png'
 import memboro_background_layer2 from '../../Assets/memboro_background_layer2.png'
-import {useTransform, useMotionValue, motion, useScroll} from 'framer-motion'
-import {useEffect, useRef, useState} from "react";
+import {useTransform, motion, useScroll} from 'framer-motion'
+import {useEffect, useState} from "react";
 export default function Memboro(props) {
     const xposition1 = useTransform(props.x,[0,2000],[-10,10]);
     const xposition2 = useTransform(props.x,[0,2000],[-20,50]);
@@ -13,11 +13,23 @@ export default function Memboro(props) {
     const [revealFactor, setRevealFactor] = useState(0)
 
     useEffect(() => {
-        return scrollYProgress.onChange(() => {
-          setRevealFactor(scrollYProgress.current - 0.5)
-          console.log(scrollYProgress.current - 0.5, ' is something1')
-        })
-    }, [])
+        function updateOpacity() {
+            setRevealFactor(scrollYProgress.current - 0.5)
+            console.log(scrollYProgress.current - 0.5, ' is something1')
+        }
+
+        const unsubscribeY = scrollYProgress.on("change", updateOpacity)
+        // const unsubscribeY = y.on("change", updateOpacity)
+
+        return () => {
+          // unsubscribeX()
+          unsubscribeY()
+        }
+        // return scrollYProgress.onChange(() => {
+        //   setRevealFactor(scrollYProgress.current - 0.5)
+        //   console.log(scrollYProgress.current - 0.5, ' is something')
+        // })
+    }, [scrollYProgress])
     const [windowSize, setWindowSize] = useState(0);
     useEffect(() => {
         setWindowSize(window.innerWidth);
@@ -35,13 +47,13 @@ export default function Memboro(props) {
                     translateX:((windowSize > 1024) ? xposition1 : 0),
                     translateY:((windowSize > 1024) ? yposition1 : 0),
                   }} className='absolute flex justify-center items-center mt-16'>
-                    <img src={memboro_background_layer1} className='w-[61%]'/>
+                    <img src={memboro_background_layer1} className='w-[61%]' alt='memboro_background_layer1'/>
                 </motion.div>
                 <motion.div style={{
                     translateX:((windowSize > 1024) ? xposition2 : 0),
                     translateY:((windowSize > 1024) ? yposition2 : 0),
                   }} className='absolute mr-[3.4rem] mt-4  flex flex-col justify-center items-center z-20'>
-                    <img src={memboro_background_layer2} className='w-[52%]'/>
+                    <img src={memboro_background_layer2} className='w-[52%]' alt='memboro_background_layer2'/>
                 </motion.div>
             </div>
             <div className='w-6/12 flex flex-col items-end z-10 py-14 -ml-36 ' >

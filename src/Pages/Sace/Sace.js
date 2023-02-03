@@ -1,9 +1,3 @@
-import MagnidVR_background2 from "../../Assets/MagnidVR_background2.png";
-import MagnidVR_background3 from "../../Assets/MagnidVR_background3.png";
-import MagnidVR_background4 from "../../Assets/MagnidVR_background4.png";
-import rozgaar_phone_ui from "../../Assets/rozgaar_phone_ui.png";
-import memboro_background_layer1 from "../../Assets/memboro_background_layer1.png";
-import memboro_background_layer2 from "../../Assets/memboro_background_layer2.png";
 import Sace_background1 from "../../Assets/Sace_background1.png";
 import Sace_background2 from "../../Assets/Sace_background2.png";
 import Sace_background3 from "../../Assets/Sace_background3.png";
@@ -27,11 +21,23 @@ export default function Sace(props){
     const [revealFactor, setRevealFactor] = useState(0)
 
     useEffect(() => {
-        return scrollYProgress.onChange(() => {
-          setRevealFactor(scrollYProgress.current - 0.5)
-          console.log(scrollYProgress.current - 0.5, ' is something6')
-        })
-    }, [])
+        function updateOpacity() {
+            setRevealFactor(scrollYProgress.current - 0.5)
+            console.log(scrollYProgress.current - 0.5, ' is something6')
+        }
+
+        const unsubscribeY = scrollYProgress.on("change", updateOpacity)
+        // const unsubscribeY = y.on("change", updateOpacity)
+
+        return () => {
+          // unsubscribeX()
+          unsubscribeY()
+        }
+        // return scrollYProgress.onChange(() => {
+        //   setRevealFactor(scrollYProgress.current - 0.5)
+        //   console.log(scrollYProgress.current - 0.5, ' is something')
+        // })
+    }, [scrollYProgress])
     return(
         <div className='w-full sticky top-28 pb-[34rem] mb-60 flex ' style={{
                 zIndex: `${(revealFactor > 0.2760) ? 22 : 19}`,
@@ -46,19 +52,19 @@ export default function Sace(props){
                         translateX:((windowSize > 1024) ? xposition1 : 0),
                         translateY:((windowSize > 1024) ? yposition1 : 0),
                       }}>
-                        <img src={Sace_background2} className='w-full'/>
+                        <img src={Sace_background2} className='w-full' alt='sace background 2'/>
                     </motion.div>
                     <motion.div className='absolute flex w-3/12 justify-end items-start -mt-[11vw] ml-44 0 z-20'  style={{
                         translateX:((windowSize > 1024) ? xposition2 : 0),
                         translateY:((windowSize > 1024) ? yposition2 : 0),
                       }}>
-                        <img src={Sace_background3} className='w-full'/>
+                        <img src={Sace_background3} className='w-full' alt='sace background 3'/>
                     </motion.div>
                     <motion.div className='absolute w-[20%] flex justify-end items-start mr-[18vw] mt-44 z-0' style={{
                         translateX:((windowSize > 1024) ? xposition3 : 0),
                         translateY:((windowSize > 1024) ? yposition3 : 0),
                       }}>
-                        <img src={Sace_background4} className='w-full'/>
+                        <img src={Sace_background4} className='w-full' alt='sace background 4'/>
                     </motion.div>
                 </div>
                 <div className='w-6/12 flex flex-col items-end z-10 -ml-14 ' >
