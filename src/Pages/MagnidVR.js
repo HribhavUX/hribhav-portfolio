@@ -2,7 +2,8 @@ import MagnidVR_background1 from "../Assets/MagnidVR_background1.png";
 import MagnidVR_background2 from "../Assets/MagnidVR_background2.png";
 import MagnidVR_background3 from "../Assets/MagnidVR_background3.png";
 import MagnidVR_background4 from "../Assets/MagnidVR_background4.png";
-import Context from "../Components/MagnidVR/Context";
+import Section1 from "../Components/MagnidVR/Section1";
+import Section2 from "../Components/MagnidVR/Section2";
 
 export default function MagnidVR(props) {
    return(
@@ -58,7 +59,8 @@ export default function MagnidVR(props) {
                 </div>
             </div>
         </div>
-        <Context />
+        <Section1 />
+        <Section2 />
        </>
     )
 }
