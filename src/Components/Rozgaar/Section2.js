@@ -7,7 +7,9 @@ import intro from "../../Assets/Rozgaar/intro.png";
 import profile from "../../Assets/Rozgaar/profile.png";
 import av from "../../Assets/Rozgaar/av.png";
 import multil from "../../Assets/Rozgaar/multil.png";
+import wire1 from "../../Assets/Rozgaar/wire1.png";
 import wire2 from "../../Assets/Rozgaar/wire2.png";
+import qa from "../../Assets/Rozgaar/qa.png";
 import wire3 from "../../Assets/Rozgaar/wire3.png";
 
 export default function Section2() {
@@ -35,6 +37,22 @@ export default function Section2() {
           <span className="w-[20%] border-2 px-4 py-2 rounded-md shadow-md">Storyboarding</span>
           <img className="w-8" src={arrowleft} alt="arrowleft"/>
           <span className="w-[20%] border-2 px-4 py-2 rounded-md shadow-md">Signature Moments</span>
+        </div>
+      </div>
+      <h2 className="px-36 mt-36 font-bold text-3xl">Deep Dive (hold your breath)</h2>
+      <div className="px-36 w-full">
+        <h3 className="my-8 font-bold text-lg">Qualitative Analysis - informal interviews</h3>
+        <div className="flex justify-between items-start my-4">
+          <img src={qa} alt="informal interview"/>
+          <div className="p-8 border-2 rounded-md shadow-md">
+            <h4 className="font-bold text-md mb-4">What am I aiming from this interview?</h4>
+            <p>Understand the tech friendliness or the range of the user</p>
+            <p>What are daily requirements of the owner</p>
+            <p>What are essential but not so regular requirements of the user</p>
+            <p>Which kinds of software they are using now</p>
+            <p>What is their current DIY solution for their problem</p>
+            <p>How susceptible to change are they?</p>
+          </div>
         </div>
       </div>
       <div className="flex my-36 justify-evenly items-center">
@@ -80,8 +98,24 @@ export default function Section2() {
       </div>
       <div className="px-36 my-24">
         <h2 className="font-Sgs text-2xl">Wireframes</h2>
+        <div className="my-4 flex justify-between items-start">
+          <img className="w-[48%]" src={wire1} alt="wireframes"/>
+          <div className="w-[48%] p-8 shadow-md rounded-md text-left">It took me several iterations and wireframes to reach the above result
+            The aim for the phase 1 is to design an app with the least ML work but easily future adaptibilty .
+          </div>
+        </div>
         <img className="my-16 mx-auto w-3/4" src={wire2} alt="wireframes"/>
         <img className="my-16 mx-auto w-3/4" src={wire3} alt="wireframes"/>
+      </div>
+      <div className="w-full px-36">
+        <p className="max-w-sm font-semibold text-xl">Looking back, I believe we could’ve done some things better.</p>
+        <p className="my-16 max-w-sm font-semibold text-xl">Reflecting back</p>
+        <p className="my-2 max-w-xs font-semibold text-md">Technological and operational limitations</p>
+        <p className="my-2 max-w-xs text-md">Due to lack of developers and time, some features had to be ruled out of the board. The aim is to include them in the next phase.</p>
+      </div>
+      <div className="w-full mt-16 bg-[#E93242] py-8">
+        <h2 className="my-4 text-center text-white font-bold text-5xl">Let's connect!</h2>
+        <p className="text-center text-white">hribhav.work@gmail.com</p>
       </div>
     </div>
   )
