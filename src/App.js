@@ -3,6 +3,7 @@ import { Routes, BrowserRouter, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home.js";
 import About from "./Pages/About/About.jsx";
 import MagnidVR from "./Pages/MagnidVR";
+import Rozgaar from './Pages/Rozgaar';
 import Pic from "./Components/Pic";
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
           </Route>
           <Route path="/magnidvr">
             <Route index element={<MagnidVR />} />
+          </Route>
+          <Route path="/rozgaar">
+            <Route index element={<Rozgaar />} />
           </Route>
         </Routes>
       </BrowserRouter>
