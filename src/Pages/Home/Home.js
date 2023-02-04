@@ -1,5 +1,4 @@
 import Navbar from "../../Components/Navbar";
-import animationBlob from "../../Assets/animationBlob.svg";
 import AnimationBlob from "../../Components/AnimationBlob";
 import SocialMediaNavbar from "../../Components/SocialMediaNavbar";
 import Music_and_scroll_control_bar from "../../Components/Music_and_scroll_control_bar";
@@ -9,8 +8,8 @@ import Rozgaar from "../Rozgaar/Rozgaar";
 import Sace from "../Sace/Sace";
 import Who_am_I from "../Who_am_I/Who_am_I";
 import {useMotionValue} from "framer-motion";
-import hribhav_name from "../../Assets/hribhav_name.svg";
-import hribhav_funky_photo from "../../Assets/hribhav_funky_photo.svg";
+import hribhav_name from "../../Assets/hribhav_name.png";
+import hribhav_funky_photo from "../../Assets/hribhav_funky_photo.png";
 import Pic from "../../Components/Pic";
 export default function Home(){
     const x = useMotionValue(0)
@@ -32,9 +31,9 @@ export default function Home(){
                     <Navbar name={hribhav_name} width={"w-14"} paddingTop={'3rem'} />
                     <SocialMediaNavbar id='unclicked' imageDisplay='block' display='block' image={hribhav_funky_photo}
                         style={{
-                            marginLeft: '-1rem',
+                            marginLeft: '0rem',
                             display: 'block',
-                            width: '58.333%',
+                            width: '30.333%',
                             cursor: 'pointer',
                         }}
                     />

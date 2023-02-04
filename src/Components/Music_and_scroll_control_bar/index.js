@@ -1,4 +1,4 @@
-import music_scroll_control from '../../Assets/music_scroll_control.svg'
+import music_scroll_control from '../../Assets/music_scroll_control.png'
 
 export default function MusicAndScrollControlBar() {
     return (

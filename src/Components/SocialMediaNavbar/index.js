@@ -8,8 +8,8 @@ export default function  SocialMediaNavbar(props){
                 <a className=' -rotate-90 text-[0.8rem] ml-2 mt-24' style={{
                     opacity: props.opacity,
                 }} href='/'>LinkedIn</a>
-                <div className='flex justify-center mt-10'>
-                    <a className='-rotate-90 text-[0.8rem] p-0 pt-8' style={{
+                <div className='flex justify-start mt-10'>
+                    <a className='-rotate-90 text-[0.8rem] p-0 pt-16' style={{
                     opacity: props.opacity,
                 }} href='/'>Twitter</a>
                     <img id={props.id} style={props.style} src={props.image} className={props.classname} alt='Social Media Navbar'/>

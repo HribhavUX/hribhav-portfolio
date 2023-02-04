@@ -1,10 +1,10 @@
 import Navbar from "../../Components/Navbar";
 import SocialMediaNavbar from "../../Components/SocialMediaNavbar";
 import Music_and_scroll_control_bar from "../../Components/Music_and_scroll_control_bar";
-import WelcomeText from "../../Assets/WelcomeText.svg";
+import WelcomeText from "../../Assets/WelcomeText.png";
 import Pic from "../../Assets/Pic.png";
-import AboutName from "../../Assets/AboutName.svg";
-import hribhav_funky_photo from '../../Assets/hribhav_funky_photo.svg';
+import AboutName from "../../Assets/AboutName.png";
+import hribhav_funky_photo from '../../Assets/hribhav_funky_photo.png';
 
 export default function About(){
         return (

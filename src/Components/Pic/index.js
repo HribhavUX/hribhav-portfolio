@@ -30,10 +30,10 @@ export default function Pic(){
     return (
         <div id='pic-container' className='w-[100%] h-screen fixed hidden justify-center items-center backdrop-blur-md'>
             <SocialMediaNavbar id='clicked' imageDisplay='block' opacity='0' image={openPicLogo} style={{
-                marginLeft: '-5.75rem',
+                marginLeft: '0.75rem',
                 display: 'block',
-                width: '30%',
-                marginTop: '0.6rem',
+                width: '22%',
+                marginTop: 'rem',
                 cursor: 'pointer',
             }}
             classname = {styles.image}

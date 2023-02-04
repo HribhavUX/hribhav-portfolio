@@ -1,4 +1,4 @@
-import animationBlob from "../../Assets/animationBlob.svg";
+import animationBlob from "../../Assets/animationBlob.png";
 import AboutMe from "../AboutMe";
 
 
