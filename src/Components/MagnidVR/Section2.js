@@ -62,6 +62,31 @@ export default function Section2() {
         <img className="w-3/4 my-16 mx-auto" src={useri1} alt="talking to the board"/>
         <img className="w-3/4 my-16 mx-auto" src={useri2} alt="talking to the board"/>
       </div>
+      <div className="w-full my-36 flex justify-between">
+        <div className="w-[32%] border-2 p-8 rounded-sm shadow-md">
+          <h4 className="font-bold text-lg mb-4">Summary</h4>
+          <p>The aim of both type of conversations was to understand the perspective of the company as well as the users. Our role is to balance both the points and create an optimum solution. The users can be divided into majorly 2 parts with 2 sub categories. We can talk about that later below.</p>
+        </div>
+        <div className="w-[64%] flex flex-col justify-between">
+          <h4 className="font-bold text-lg my-4">Question Domains</h4>
+          <div className="flex justify-between">
+            <div className="w-[48%] border-2 p-8 rounded-sm shadow-md">
+              <h4 className="font-bold text-lg mb-4">B2C Users</h4>
+              <p>Tech Familiarity</p> 
+              <p>Attention span</p>
+              <p>Experience with VR and physical events</p>
+              <p>Conversations in VR</p>
+            </div>
+            <div className="w-[48%] border-2 p-8 rounded-sm shadow-md">
+              <h4 className="font-bold text-lg mb-4">B2B Users</h4>
+              <p>Perspective on virtual events</p>
+              <p>Shift to VR</p>
+              <p>Cost of hosting a physical virtual / VR event</p>
+              <p>Brand placements</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="flex my-36 justify-evenly items-center">
         <p className="text-xl max-w-[30%]">Okay...Let’s identify and categorise our stakeholders so that we know, whom to design for</p>
         <img className="h-[50vh]" src={thinking} alt="decorative"/>
