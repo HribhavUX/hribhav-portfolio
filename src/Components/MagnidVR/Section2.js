@@ -16,6 +16,8 @@ import arrowright from "../../Assets/arrow-right.png";
 import arrowdown from "../../Assets/arrow-down.png";
 import arrowleft from "../../Assets/arrow-left.png";
 import story from "../../Assets/MagnidVR/story.png";
+import persona1 from "../../Assets/MagnidVR/persona1.png";
+import persona2 from "../../Assets/MagnidVR/persona2.png";
 
 export default function Section2() {
   return (
@@ -64,6 +66,71 @@ export default function Section2() {
         <p className="text-xl max-w-[30%]">Okay...Let’s identify and categorise our stakeholders so that we know, whom to design for</p>
         <img className="h-[50vh]" src={thinking} alt="decorative"/>
       </div>
+      <div className="flex my-36 mx-auto px-24 justify-between">
+        <div className="w-[32%] flex flex-col justify-between items-center">
+          <img className="object-fill" src={persona1} alt="persona"/>
+          <div className="p-8 w-full border-2 shadow-md rounded-md">
+            <h4><b>Bio</b></h4>
+            <p><b>Name </b>Adrian</p>
+            <p><b>Age </b>42yrs</p>
+            <p><b>Marital Status </b>Married</p>
+            <p><b>Occupation </b>Floor Manager</p>
+          </div>
+        </div>
+        <div className="w-[64%] flex flex-col justify-between">
+          <div className="flex w-full justify-evenly">
+            <div className="w-[48%] p-8 border-2 rounded-md shadow-md">
+              <h4 className="text-lg font-bold">Pain Points</h4>
+              <p>VR is overwhelming.</p>
+              <p>Cannot manage to get VR headsets for just a few events.</p>
+              <p>VR headsets, after a long use, give me headaches.</p>
+              <p>On the face brand placements, pull me out of the experience.</p>
+              <p>1 on 1 interactions are hell</p>
+            </div>
+            <div className="w-[48%] p-8 border-2 rounded-md shadow-md">
+              <h4 className="text-lg font-bold">Needs</h4>
+              <p>Needs a break between VR sessions</p>
+              <p>Need help with getting the VR headset</p>
+              <p>Need an incentive to put the effort to learn VR</p>
+              <p>Need tutorials to reach the event</p>
+            </div>
+          </div>
+          <div className="w-full p-8 mt-4 border-2 rounded-md shadow-md font-bold text-xl">
+            “I don’t want to learn a whole new technology just to attend a conference. VR just gives me headaches. Not worth it.”
+          </div>
+        </div>
+      </div>
+      <div className="flex my-36 mx-auto px-24 justify-between">
+       <div className="w-[64%] flex flex-col justify-between">
+          <div className="flex w-full justify-evenly">
+            <div className="w-[48%] p-8 border-2 rounded-md shadow-md">
+              <h4 className="text-lg font-bold">Pain Points</h4>
+              <p>Sponsors don’t see a benefit in investing in VR promotions.</p>
+              <p>There are no ‘aha moments’ to grab user’s attention</p>
+              <p>Drop out rate after an hour increases exponentially</p>
+              <p>Breaks are not practical as users wont come back</p>
+            </div>
+            <div className="w-[48%] p-8 border-2 rounded-md shadow-md">
+              <h4 className="text-lg font-bold">Needs</h4>
+              <p>Provide non-intrusive yet affective ad spaces for sponsors.</p>
+              <p>Need some features to hook the audience.</p>
+              <p>Increase the retention rate</p>
+            </div>
+          </div>
+          <div className="w-full p-8 mt-4 border-2 rounded-md shadow-md font-bold text-xl">“I want to give users a break, but they wont come back. That’s another reason companies don’t sponsor such events ”</div>
+        </div>
+        <div className="w-[32%] flex flex-col justify-between items-center">
+          <img className="object-fill" src={persona2} alt="persona"/>
+          <div className="p-8 w-full border-2 shadow-md rounded-md">
+            <h4><b>Bio</b></h4>
+            <p><b>Name </b>Kaylen</p>
+            <p><b>Age </b>38yrs</p>
+            <p><b>Marital Status </b>Married</p>
+            <p><b>Occupation </b>Event Manager</p>
+          </div>
+        </div>
+      </div>
+ 
       <div className="flex my-36 justify-evenly items-center">
         <p className="text-xl max-w-[30%]">We understood what our users want. So, now <b>How might we...</b></p>
         <img className="h-[50vh]" src={how} alt="decorative"/>
