@@ -19,9 +19,12 @@ export default function Section1() {
         <div className="w-1/2 font-Por my-12">
           <div>
             <h2 className="font-Sgs text-xl my-2">My Role</h2>
-            <span className="mx-2 font-Por px-4 py-2 bg-[#E93242] rounded-[10px] text-white">UX Research</span>
-            <span className="mx-2 font-Por px-4 py-2 bg-[#E93242] rounded-[10px] text-white">UI Design</span>
-            <span className="mx-2 font-Por px-4 py-2 bg-[#E93242] rounded-[10px] text-white">Interaction Designer</span>
+            <div className="flex flex-wrap gap-2">
+              <div className="mx-2 font-Por px-4 py-2 bg-[#E93242] rounded-[10px] text-white">UX Research</div>
+              <div className="mx-2 font-Por px-4 py-2 bg-[#E93242] rounded-[10px] text-white">UI Design</div>
+              <div className="mx-2 font-Por px-4 py-2 bg-[#E93242] rounded-[10px] text-white">User Review</div>
+              <div className="mx-2 font-Por px-4 py-2 bg-[#E93242] rounded-[10px] text-white">Content Design + Strategy</div>
+            </div>
           </div>
           <div>
             <h2 className="font-Sgs text-xl mt-8">What did I build?</h2>
