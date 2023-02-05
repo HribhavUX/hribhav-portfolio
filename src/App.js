@@ -4,6 +4,7 @@ import Home from "./Pages/Home/Home.js";
 import About from "./Pages/About/About.jsx";
 import MagnidVR from "./Pages/MagnidVR";
 import Rozgaar from './Pages/Rozgaar';
+import NotWork from "./Pages/NotWork";
 import Pic from "./Components/Pic";
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
           </Route>
           <Route path="/rozgaar">
             <Route index element={<Rozgaar />} />
+          </Route>
+          <Route path="/notwork">
+            <Route index element={<NotWork />} />
           </Route>
         </Routes>
       </BrowserRouter>
