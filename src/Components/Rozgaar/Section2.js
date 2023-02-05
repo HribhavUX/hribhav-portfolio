@@ -9,6 +9,7 @@ import av from "../../Assets/Rozgaar/av.png";
 import multil from "../../Assets/Rozgaar/multil.png";
 import wire1 from "../../Assets/Rozgaar/wire1.png";
 import wire2 from "../../Assets/Rozgaar/wire2.png";
+import gui from "../../Assets/Rozgaar/gui.png";
 import qa from "../../Assets/Rozgaar/qa.png";
 import wire3 from "../../Assets/Rozgaar/wire3.png";
 
@@ -90,7 +91,7 @@ export default function Section2() {
         <img className="w-1/2" src={multil} alt="decorative"/>
       </div>
       <div className="flex my-36 justify-center items-center">
-        <img className="w-1/2" src={av} alt="decorative"/>
+        <img className="w-1/2" src={gui} alt="decorative"/>
         <div className="max-w-[30%]">
           <h2 className="font-bold text-2xl">Graphic Intensive UI</h2>
           <p className="text-xl my-2">Graphical representation aids in decreasing the cognitive load on the user, resultng in efficient decision making.</p>
