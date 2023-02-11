@@ -3,6 +3,8 @@ import memboro_background_layer1 from '../../Assets/memboro_background_layer1.pn
 import memboro_background_layer2 from '../../Assets/memboro_background_layer2.png'
 import {useTransform, motion, useScroll} from 'framer-motion'
 import {useEffect, useState} from "react";
+import SocialMediaNavbar from "../../Components/SocialMediaNavbar";
+import hribhav_funky_photo from "../../Assets/hribhav_funky_photo.png";
 export default function Memboro(props) {
     const xposition1 = useTransform(props.x,[0,2000],[-10,10]);
     const xposition2 = useTransform(props.x,[0,2000],[-20,50]);
@@ -25,10 +27,6 @@ export default function Memboro(props) {
           // unsubscribeX()
           unsubscribeY()
         }
-        // return scrollYProgress.onChange(() => {
-        //   setRevealFactor(scrollYProgress.current - 0.5)
-        //   console.log(scrollYProgress.current - 0.5, ' is something')
-        // })
     }, [scrollYProgress])
     const [windowSize, setWindowSize] = useState(0);
     useEffect(() => {
@@ -38,11 +36,17 @@ export default function Memboro(props) {
         <motion.div className='w-full sticky top-0 bg-white pt-[12vh] pb-[100rem] flex justify-center ' style={{
             // filter: `blur(${(revealFactor+0.19 > 0) ? (revealFactor+0.1)*6 : 0}rem)`,
             // zIndex: `${(revealFactor > -0.058342) ? 19 : 20}`,
-        }}>
+        }}
+        >
             <div className='absolute w-full z-0'>
                 <img src={memboro_background} className='w-full' alt='memboro_background'/>
             </div>
-            <div className='w-[45%] pl-12 flex flex-col justify-center items-center'>
+            <div className='w-[45%] pl-12 flex flex-col justify-center items-center'
+                onClick={() => {
+                    console.log('clicked')
+                }
+                }
+            >
                 <motion.div style={{
                     translateX:((windowSize > 1024) ? xposition1 : 0),
                     translateY:((windowSize > 1024) ? yposition1 : 0),

@@ -25,6 +25,7 @@ module.exports = {
           KaB: 'KarantinaBold',
           KaR: 'KarantinaRegular',
           KaL: 'KarantinaLight',
+          Ava: 'Ava',
         }
     },
   },

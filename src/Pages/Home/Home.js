@@ -11,6 +11,8 @@ import {useMotionValue} from "framer-motion";
 import hribhav_name from "../../Assets/hribhav_name.png";
 import hribhav_funky_photo from "../../Assets/hribhav_funky_photo.png";
 import Pic from "../../Components/Pic";
+import {useContext, useEffect, useState} from "react";
+
 export default function Home(){
     const x = useMotionValue(0)
     const y = useMotionValue(0)
@@ -21,23 +23,34 @@ export default function Home(){
     const handleMouse=(e)=>{
         x.set(e.pageX);
         y.set(e.pageY);
-        console.log(x,y, "x main page,y main page")
+        // console.log(x,y, "x main page,y main page")
     }
+
+    // function handleMouseMove(e) {
+    //
+    // }
+
+    const [playing, setPlaying] = useState(true);
+    useEffect(() => {
+        setPlaying(true);
+        // console.log('playing', playing);
+    }, [playing]);
     return (
         <div>
             <Pic />
             <div id='main-body' className='w-full bg-[#15151A] z-10 overflow-x-clip' onMouseMove={(e)=>handleMouse(e)}>
-                <div className='relative w-full flex flex-col items-center'>
+                <div className='relative w-full flex flex-col'>
                     <Navbar name={hribhav_name} width={"w-14"} paddingTop={'3rem'} />
                     <SocialMediaNavbar id='unclicked' imageDisplay='block' display='block' image={hribhav_funky_photo}
                         style={{
-                            marginLeft: '0rem',
                             display: 'block',
                             width: '30.333%',
                             cursor: 'pointer',
                         }}
                     />
-                    <MusicAndScrollControlBar />
+                    <div className='absolute right-[7rem]'>
+                        <MusicAndScrollControlBar playing={playing} />
+                    </div>
                     <AnimationBlob />
                     <div className='relative w-full h-full'>
                         <Memboro x={x} y={y} />

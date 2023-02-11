@@ -1,7 +1,7 @@
-import hribhav_name from "../Assets/hribhav_name.png";
-import hribhav_funky_photo from "../Assets/hribhav_funky_photo.png";
-import Navbar from "../Components/Navbar";
-import SocialMediaNavbar from "../Components/SocialMediaNavbar";
+import hribhav_name from "../../Assets/hribhav_name.png";
+import hribhav_funky_photo from "../../Assets/hribhav_funky_photo.png";
+import Navbar from "../../Components/Navbar";
+import SocialMediaNavbar from "../../Components/SocialMediaNavbar";
 
 export default function NotWork() {
   return (

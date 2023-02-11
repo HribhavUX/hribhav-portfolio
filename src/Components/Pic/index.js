@@ -16,7 +16,6 @@ export default function Pic(){
             // banner.style.transition = "all 3s ease-in-out";
             banner.classList.remove(styles.fadeOut)
             banner.classList.add(styles.fadeIn)
-            console.log("clicked");
             // mainBody.style.filter = "blur(0px)";
         } );
         btn2.addEventListener("click", () => {
@@ -34,7 +33,7 @@ export default function Pic(){
                 marginLeft: '0.75rem',
                 display: 'block',
                 width: '22%',
-                marginTop: 'rem',
+                marginTop: '0.5rem',
                 cursor: 'pointer',
             }}
             classname = {styles.image}

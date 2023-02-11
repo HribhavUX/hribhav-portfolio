@@ -3,6 +3,7 @@ import AboutMe from "../AboutMe";
 
 
 export default function AnimationBlob(){
+
     return (
         <div className='w-full flex flex-col items-center'>
             <div className='w-9/12 ml-12 flex flex justify-center items-center'>

@@ -4,7 +4,7 @@ import Home from "./Pages/Home/Home.js";
 import About from "./Pages/About/About.jsx";
 import MagnidVR from "./Pages/MagnidVR";
 import Rozgaar from './Pages/Rozgaar';
-import NotWork from "./Pages/NotWork";
+import NotWork from "./Pages/NotWork/NotWork";
 import Pic from "./Components/Pic";
 function App() {
 
@@ -27,7 +27,7 @@ function App() {
           <Route path="/rozgaar">
             <Route index element={<Rozgaar />} />
           </Route>
-          <Route path="/notwork">
+          <Route path="/not_work">
             <Route index element={<NotWork />} />
           </Route>
         </Routes>
