@@ -6,7 +6,7 @@ import Memboro from "../Memboro/Memboro";
 import MagnidVR from "../MagnidVR/MagnidVR";
 import Rozgaar from "../Rozgaar/Rozgaar";
 import Sace from "../Sace/Sace";
-import Who_am_I from "../Who_am_I/Who_am_I";
+import Who_am_I from "../WhoAmI/Who_am_I";
 import {useMotionValue} from "framer-motion";
 import hribhav_name from "../../Assets/hribhav_name.png";
 import hribhav_funky_photo from "../../Assets/hribhav_funky_photo.png";

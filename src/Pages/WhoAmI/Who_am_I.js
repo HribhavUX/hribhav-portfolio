@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import styles from './who.module.css';
 import {useScroll} from "framer-motion";
 
-export default function Who_am_I() {
+export default function WhoAmI() {
     useEffect(() => {
         function isInViewport(item) {
 

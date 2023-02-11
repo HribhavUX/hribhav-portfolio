@@ -2,7 +2,7 @@ import HribhavPic from '../../Assets/Pic2.png'
 import SocialMediaNavbar from "../SocialMediaNavbar";
 import openPicLogo from '../../Assets/openPicLogo.png';
 import {useEffect} from "react";
-import styles from '../../Pages/Who_am_I/who.module.css';
+import styles from '../../Pages/WhoAmI/who.module.css';
 export default function Pic(){
     useEffect(() => {
         const btn1 = document.querySelector('#unclicked');

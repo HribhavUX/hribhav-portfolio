@@ -38,12 +38,12 @@ export default function MagnidVR(props) {
         // })
     }, [scrollYProgress])
     return(
-        <div className='w-full sticky top-[0vh] flex justify-center pb-96 px-0 h-full'
+        <div className='w-full sticky top-[0vh] flex justify-center pb-[100rem] px-0 h-full'
             style={{
                 // zIndex: "20",
-                zIndex: `${(revealFactor > -0.058342) ? 20 : 19}`,
+                // zIndex: `${(revealFactor > -0.058342) ? 20 : 19}`,
                 // multiply revealFactor by -1 and then add filter
-                filter: `blur(${(revealFactor+0.04<0)?((revealFactor+0.04)*(-50)):((revealFactor+0.006>0)?((revealFactor+0.006)*25):0)}rem)`,
+                // filter: `blur(${(revealFactor+0.04<0)?((revealFactor+0.04)*(-50)):((revealFactor+0.006>0)?((revealFactor+0.006)*25):0)}rem)`,
             }}
         >
             <div className='absolute w-full z-0'>

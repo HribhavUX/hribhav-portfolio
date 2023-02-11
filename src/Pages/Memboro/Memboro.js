@@ -35,9 +35,9 @@ export default function Memboro(props) {
         setWindowSize(window.innerWidth);
     }, []);
     return (
-        <motion.div className='w-full sticky top-0 bg-white pt-12 pb-[32rem] flex justify-center ' style={{
-            filter: `blur(${(revealFactor+0.19 > 0) ? (revealFactor+0.1)*6 : 0}rem)`,
-            zIndex: `${(revealFactor > -0.058342) ? 19 : 20}`,
+        <motion.div className='w-full sticky top-0 bg-white pt-[12vh] pb-[100rem] flex justify-center ' style={{
+            // filter: `blur(${(revealFactor+0.19 > 0) ? (revealFactor+0.1)*6 : 0}rem)`,
+            // zIndex: `${(revealFactor > -0.058342) ? 19 : 20}`,
         }}>
             <div className='absolute w-full z-0'>
                 <img src={memboro_background} className='w-full' alt='memboro_background'/>
