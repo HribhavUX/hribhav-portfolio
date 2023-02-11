@@ -16,6 +16,11 @@ export const blog = {
       ]
     },
     {
+      name: 'link',
+      title: 'Link',
+      type: 'string',
+    },
+    {
       name: 'cards',
       title: 'Cards',
       type: 'array',
