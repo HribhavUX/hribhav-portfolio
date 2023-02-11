@@ -16,6 +16,7 @@ export default function Pic(){
             // banner.style.transition = "all 3s ease-in-out";
             banner.classList.remove(styles.fadeOut)
             banner.classList.add(styles.fadeIn)
+            console.log("clicked");
             // mainBody.style.filter = "blur(0px)";
         } );
         btn2.addEventListener("click", () => {
