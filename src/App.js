@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, BrowserRouter, Route } from "react-router-dom";
-import Home from "./Pages/Home/Home.js";
-import About from "./Pages/About/About.jsx";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
 import MagnidVR from "./Pages/MagnidVR";
 import Rozgaar from './Pages/Rozgaar';
 import NotWork from "./Pages/NotWork/NotWork";

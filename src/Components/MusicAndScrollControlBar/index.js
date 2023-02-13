@@ -17,7 +17,7 @@ export default function MusicAndScrollControlBar(props) {
     }, [volume]);
 
     return (
-        <div className='flex h-full fixed mt-0 z-40' onClick={
+        <div className='flex h-full right-[7vw] fixed mt-0 z-40' onClick={
             () => {
                 setVolume(
                     (volume === 0) ? 1 : 0

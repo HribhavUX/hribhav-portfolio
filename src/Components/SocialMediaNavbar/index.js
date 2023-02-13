@@ -1,7 +1,7 @@
 export default function  SocialMediaNavbar(props){
     return (
-        <div className='w-full flex justify-start h-full fixed z-40'>
-            <div className='w-full flex flex-col px-20 mt-56 items-start text-white font-PoR'>
+        <div className='flex justify-start fixed left-[0vw] z-40'>
+            <div className='w-full relative flex flex-col px-20 mt-[35vh] items-start text-white font-PoR'>
                 <a className='text-[0.8rem] -rotate-90  pl-0 pr-0' style={{
                     opacity: props.opacity,
                 }} href='/'>Instagram</a>

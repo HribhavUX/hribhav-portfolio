@@ -114,12 +114,7 @@ code {
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'SpaceGroteskSemiBold';
-    src: url('./Fonts/SpaceGrotesk-SemiBold.ttf');
-    font-weight: 600;
-    font-style: normal;
-}
+
 
 @font-face {
     font-family: 'SpaceGroteskBold';

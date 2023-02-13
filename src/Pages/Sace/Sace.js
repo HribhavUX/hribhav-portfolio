@@ -39,11 +39,11 @@ export default function Sace(props){
         // })
     }, [scrollYProgress])
     return(
-        <div className='w-full sticky top-28 pb-[100rem] mb-60 flex ' style={{
+        <div className='w-full sticky top-[20vh] flex ' style={{
                 // zIndex: `${(revealFactor > 0.2760) ? 22 : 19}`,
                 // filter: `blur(${(((revealFactor - 0.34)<0)?((revealFactor-0.31)*(-100)):0)}rem)`,
             }}>
-            <div className='w-full  flex justify-center items-center px-20 pb-[100rem]' >
+            <div className='w-full flex justify-center items-center px-20' >
                 <div className='absolute w-full z-0'>
                     <img src={Sace_background1} className='w-full' alt='sace background'/>
                 </div>

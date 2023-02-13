@@ -38,7 +38,7 @@ export default function MagnidVR(props) {
         // })
     }, [scrollYProgress])
     return(
-        <div className='w-full sticky top-[0vh] flex justify-center pb-[100rem] px-0 h-full'
+        <div className='w-full sticky top-[0vh] flex justify-center pb-[40vh] px-0 h-full'
             style={{
                 // zIndex: "20",
                 // zIndex: `${(revealFactor > -0.058342) ? 20 : 19}`,
@@ -49,7 +49,7 @@ export default function MagnidVR(props) {
             <div className='absolute w-full z-0'>
                 <img src={MagnidVR_background1} className='w-full' alt='magnidVR'/>
             </div>
-            <div className='w-6/12 pl-48 flex flex-col justify-center z-30 pt-[4.5rem]'>
+            <div className='w-6/12 pl-48 flex flex-col justify-center z-30 pt-[15vh]'>
                 <div className='w-full'>
                     <p className='text-white w-full font-Sgb text-[2.65rem] pt-20'>
                         Magnid VR
