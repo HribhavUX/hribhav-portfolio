@@ -48,7 +48,7 @@ export default function Home(){
                             cursor: 'pointer',
                         }}
                     />
-                    <div className='absolute right-[7rem]'>
+                    <div className='absolute right-[7vw]'>
                         <MusicAndScrollControlBar playing={playing} />
                     </div>
                     <AnimationBlob />

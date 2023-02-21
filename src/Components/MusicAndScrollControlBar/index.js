@@ -17,7 +17,7 @@ export default function MusicAndScrollControlBar(props) {
     }, [volume]);
 
     return (
-        <div className='flex h-full right-[7vw] fixed mt-0 z-40' onClick={
+        <div className='flex h-full right-[7vw] bottom-[15vh] fixed z-40' onClick={
             () => {
                 setVolume(
                     (volume === 0) ? 1 : 0
@@ -34,7 +34,7 @@ export default function MusicAndScrollControlBar(props) {
                 controls={true}
                 style={{display: 'none'}}
             />
-            <div className='w-full p-0 -mt-8 flex flex-col justify-center items-end text-white font-PoR'>
+            <div className='w-full p-0 -mt-8 flex flex-col justify-end items-end text-white font-PoR'>
                 <img className='pr-0 mb-2' style={
                     (volume===0)? {width: "1.5rem"}:{width: "2rem"}
                 } src={volume===0?music_mute:music_unmute}/>
