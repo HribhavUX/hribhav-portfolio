@@ -62,28 +62,20 @@ export default function WhoAmI() {
             setRevealFactor(scrollYProgress.current - 0.5)
             console.log(scrollYProgress.current - 0.5, ' is something6')
         }
-
         const unsubscribeY = scrollYProgress.on("change", updateOpacity)
-        // const unsubscribeY = y.on("change", updateOpacity)
-
         return () => {
-          // unsubscribeX()
           unsubscribeY()
         }
-        // return scrollYProgress.onChange(() => {
-        //   setRevealFactor(scrollYProgress.current - 0.5)
-        //   console.log(scrollYProgress.current - 0.5, ' is something')
-        // })
     }, [scrollYProgress])
     return (
-        <div className='flex w-full sticky justify-center bg-[#15151A] pt-[9vh] mt-[40vh] pb-[5vh] z-20' style={{
+        <div className='flex w-full sticky justify-center bg-[#15151A] pt-[9vh] pb-[5vh] z-20' style={{
                 // zIndex: `${(revealFactor >= 0.5) ? 23 : 22}`,
             }}>
             <div id='who_am_i' className='flex w-[67%] flex-col items-center'>
-                <p className='mb-2 font-PoB text-white text-[3rem]'>
+                <p className='mb-0 font-PoB text-white text-[3rem]'>
                     Who am I?
                 </p>
-                <div className='flex w-full justify-evenly pt-20 pb-2'>
+                <div className='flex w-full justify-evenly pt-10'>
                     <div id='box' className='p-3 py-7 shadow-2xl w-[23.5%] rounded-xl mr-5 mb-5 bg-[#23232D] flex flex-col'>
                         <div className='w-full flex justify-between pb-3'>
                             <div className='w-3/12'>

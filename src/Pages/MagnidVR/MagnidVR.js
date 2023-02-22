@@ -38,7 +38,7 @@ export default function MagnidVR(props) {
         // })
     }, [scrollYProgress])
     return(
-        <div className='w-full sticky top-[0vh] flex justify-center pb-[40vh] px-0 h-full'
+        <div className='w-full sticky top-0 flex justify-center items-center h-[110vh] px-0'
             style={{
                 // zIndex: "20",
                 // zIndex: `${(revealFactor > -0.058342) ? 20 : 19}`,
@@ -49,12 +49,12 @@ export default function MagnidVR(props) {
             <div className='absolute w-full z-0'>
                 <img src={MagnidVR_background1} className='w-full' alt='magnidVR'/>
             </div>
-            <div className='w-6/12 pl-48 flex flex-col justify-center z-30 pt-[15vh]'>
+            <div className='w-6/12 pl-[13vmax] flex flex-col justify-center z-30'>
                 <div className='w-full'>
-                    <p className='text-white w-full font-Sgb text-[2.65rem] pt-20'>
+                    <p className='text-white w-full font-Sgb text-[2.65rem]'>
                         Magnid VR
                     </p>
-                    <p className='text-white w-full font-Sgr text-sm pt-0'>
+                    <p className='text-white w-full font-Sgr text-sm'>
                         Helps organizations plan and host events using VR technology to enhance the event experience for attendees and make it more interactive, engaging, and immersive.
                     </p>
                     <p className='text-white w-1/2 font-PoB text-base pt-10 pb-1.5'>
@@ -91,19 +91,19 @@ export default function MagnidVR(props) {
                 </div>
             </div>
             <div className='w-[40%] pl-0 flex flex-col justify-center items-center'>
-                <motion.div className='absolute w-[26%] flex justify-center items-center mt-28 z-10' style={{
+                <motion.div className='absolute w-[26%] -mt-[1vmax] flex justify-center items-center z-10' style={{
                     translateX:((windowSize > 1024) ? xposition1 : 0),
                     translateY:((windowSize > 1024) ? yposition1 : 0),
                   }}>
                     <img src={MagnidVR_background2} className='w-[100%]' alt='magnid background 2'/>
                 </motion.div>
-                <motion.div className='absolute mr-[20vw] w-[20%] -mt-[10vw] flex justify-center items-center z-0' style={{
+                <motion.div className='absolute mr-[20vw] w-[20%] -mt-[22vmax] flex justify-center items-center z-0' style={{
                     translateX:((windowSize > 1024) ? xposition2 : 0),
                     translateY:((windowSize > 1024) ? yposition2 : 0),
                   }}>
                     <img src={MagnidVR_background3} className='w-[100%]' alt='magnid background 3'/>
                 </motion.div>
-                <motion.div className='absolute ml-[12.5vw] w-[16%] mt-[8vw]  flex flex-col justify-center items-center z-10' style={{
+                <motion.div className='absolute ml-[12.5vw] w-[16%] mt-[0vmax]  flex flex-col justify-center items-center z-10' style={{
                     translateX:((windowSize > 1024) ? xposition3 : 0),
                     translateY:((windowSize > 1024) ? yposition3 : 0),
                   }}>

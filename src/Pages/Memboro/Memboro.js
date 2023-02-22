@@ -17,14 +17,10 @@ export default function Memboro(props) {
     useEffect(() => {
         function updateOpacity() {
             setRevealFactor(scrollYProgress.current - 0.5)
-            console.log(scrollYProgress.current - 0.5, ' is something1')
+                console.log(scrollYProgress.current - 0.5, ' is something1')
         }
-
         const unsubscribeY = scrollYProgress.on("change", updateOpacity)
-        // const unsubscribeY = y.on("change", updateOpacity)
-
         return () => {
-          // unsubscribeX()
           unsubscribeY()
         }
     }, [scrollYProgress])
@@ -33,7 +29,7 @@ export default function Memboro(props) {
         setWindowSize(window.innerWidth);
     }, []);
     return (
-        <motion.div className='w-full sticky top-0 bg-white pt-[15vh] pb-[40vh] flex justify-center ' style={{
+        <motion.div className='w-full sticky top-0 h-[110vh] bg-white flex justify-center items-center' style={{
             // filter: `blur(${(revealFactor+0.19 > 0) ? (revealFactor+0.1)*6 : 0}rem)`,
             // zIndex: `${(revealFactor > -0.058342) ? 19 : 20}`,
         }}
@@ -60,8 +56,8 @@ export default function Memboro(props) {
                     <img src={memboro_background_layer2} className='w-[52%]' alt='memboro_background_layer2'/>
                 </motion.div>
             </div>
-            <div className='w-6/12 flex flex-col items-end z-10 py-14 -ml-36 ' >
-                <div className='w-[100%] flex flex-col pl-40'>
+            <div className='w-6/12 flex flex-col items-end z-10 -ml-[9.5vmax] ' >
+                <div className='w-[100%] flex flex-col pl-[12vmax]'>
                     <p className='font-CoB text-[2.75rem] tracking-wide'>Memboro</p>
                     <p className='text-sm font-CoS tracking-tight pr-28 pt-2'>Memboro is a platform that allows Indian creators to receive financial support from their fanbase. Memboro is a platform for creators who want to earn a sustainable income from their work and for fans to show their who want to support and help creators continue to create.</p>
                     <p className='text-base font-PoB tracking-tight pr-56 pt-10 tracking-tighter'>My Role</p>

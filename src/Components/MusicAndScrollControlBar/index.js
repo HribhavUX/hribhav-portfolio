@@ -1,12 +1,27 @@
-import music_mute from '../../Assets/music_mute.png'
-import music_unmute from '../../Assets/music_unmute.png'
-import scroll from '../../Assets/scroll.png'
+import music_mute from '../../Assets/music_muteWhite.png'
+import music_unmute from '../../Assets/music_unmuteWhite.png'
+import scrollWhite from '../../Assets/scrollWhite.png'
+import scrollBlack from '../../Assets/scrollBlack.png'
 import {useEffect, useState} from "react";
 import ReactPlayer from 'react-player';
 import music from '../../../src/music.mp3'
+import {useScroll} from "framer-motion";
 export default function MusicAndScrollControlBar(props) {
     const [playing, setPlaying] = useState(true);
     const [volume, setVolume] = useState(0);
+    const { scrollYProgress } = useScroll()
+    const [revealFactor, setRevealFactor] = useState(0)
+
+    useEffect(() => {
+        function updateOpacity() {
+            setRevealFactor(scrollYProgress.current - 0.5)
+                console.log(scrollYProgress.current - 0.5, ' is any')
+        }
+        const unsubscribeY = scrollYProgress.on("change", updateOpacity)
+        return () => {
+          unsubscribeY()
+        }
+    }, [scrollYProgress])
      let context;
     // window.onload = function() {
         context = new AudioContext();
@@ -38,8 +53,12 @@ export default function MusicAndScrollControlBar(props) {
                 <img className='pr-0 mb-2' style={
                     (volume===0)? {width: "1.5rem"}:{width: "2rem"}
                 } src={volume===0?music_mute:music_unmute}/>
-                <img className='w-[1.5rem] pr-0' src={scroll} alt='scroll'/>
-                <p className='font-PoR text-sm rotate-90 m-0 mt-16 -mr-7'>Scroll Down</p>
+                <img className='w-[1.5rem] pr-0' src={(revealFactor>=-0.264388233  && revealFactor<=-0.10757535) ? scrollBlack : scrollWhite} alt='scroll'/>
+                <p className='font-PoR text-sm rotate-90 m-0 mt-16 -mr-7' style={(revealFactor>=-0.2887185 && revealFactor<=-0.13190568) ? {
+                    color: 'black',
+                }:{
+                    color: 'white',
+                }}>Scroll Down</p>
             </div>
         </div>
         // <div className='z-[100]'>

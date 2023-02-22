@@ -32,7 +32,7 @@ export default function Rozgaar(props) {
         // })
     }, [scrollYProgress])
     return (
-        <div className='w-full sticky top-[0vh] flex justify-center pb-[40vh]' style={{
+        <div className='w-full sticky top-[1vw] h-[110vh] flex justify-center items-center' style={{
             // zIndex: `${(revealFactor > 0.101532) ? 21 : 19}`,
             // filter: `blur(${(((revealFactor - 0.115)<0)?((revealFactor-0.115)*(-200)):((revealFactor-0.145>0)?((revealFactor-0.145)*50):0))}rem)`,
 
@@ -40,10 +40,10 @@ export default function Rozgaar(props) {
             <div className='absolute w-full z-0'>
                 <img src={rozgaar_background} className='w-full' alt='memboro_background'/>
             </div>
-            <div className='w-[80%] flex justify-center -mr-16'>
-                <div className='w-6/12 flex flex-col justify-center z-30 -mr-36 pt-[20vh] pb-36'>
+            <div className='w-[80%] flex justify-center -mr-[5vmax]'>
+                <div className='w-6/12 flex flex-col justify-center z-30 -mr-[9vmax]'>
                     <div className='w-full'>
-                        <p className='text-white w-full font-KaB text-[2.65rem] pt-[10vh]'>
+                        <p className='text-white w-full font-KaB text-[2.65rem]'>
                             Rozgaar
                         </p>
                         <p className='text-white w-8/12 font-Sgr text-sm pt-0'>
