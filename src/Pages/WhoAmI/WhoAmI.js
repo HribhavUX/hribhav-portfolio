@@ -108,7 +108,7 @@ export default function WhoAmI() {
                                 </p>
                             </div>
                         </div>
-                        <div className='text-[0.65rem] font-PoM text-white text-[0.75rem]'>
+                        <div className='text-[0.75rem] font-PoM text-white text-[0.75rem]'>
                             “The best thing about working with Hribhav is he walks you through the process, which I feel lacks with a lot of other designers. I have seen him grow from a curious team contributor to an incredible team lead”
                         </div>
                     </div>
@@ -126,7 +126,7 @@ export default function WhoAmI() {
                                 </p>
                             </div>
                         </div>
-                        <div className='text-[0.65rem] font-PoM text-white text-[0.75rem]'>
+                        <div className='text-[0.75rem] font-PoM text-white text-[0.75rem]'>
                             “Hribhav has a keen eye for detail and a deep understanding of design principles, which resulted in visually stunning designs that effectively communicated our message and resonated with our audience.”
                         </div>
                     </div>
@@ -144,7 +144,7 @@ export default function WhoAmI() {
                                 </p>
                             </div>
                         </div>
-                        <div className='text-[0.65rem] font-PoM text-white text-[0.75rem]'>
+                        <div className='text-[0.75rem] font-PoM text-white text-[0.75rem]'>
                             “The project delivery was on-point. Punctual, Processional and highly objective driven designing skills. Great work by Hribhav! Cheers!”
                         </div>
                     </div>

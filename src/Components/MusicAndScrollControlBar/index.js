@@ -1,10 +1,10 @@
-import music_mute from '../../Assets/music_muteWhite.png'
-import music_unmute from '../../Assets/music_unmuteWhite.png'
-import scrollWhite from '../../Assets/scrollWhite.png'
-import scrollBlack from '../../Assets/scrollBlack.png'
+import music_mute from '../../Assets/music_muteWhite.png';
+import music_unmute from '../../Assets/music_unmuteWhite.png';
+import scrollWhite from '../../Assets/scrollWhite.png';
+import scrollBlack from '../../Assets/scrollBlack.png';
 import {useEffect, useState} from "react";
 import ReactPlayer from 'react-player';
-import music from '../../../src/music.mp3'
+import music from '../../../src/music.mp3';
 import {useScroll} from "framer-motion";
 export default function MusicAndScrollControlBar(props) {
     const [playing, setPlaying] = useState(true);
