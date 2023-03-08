@@ -2,7 +2,7 @@
   "name": "hribhav-portfolio",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://mishraanis.github.io/hribhav-portfolio",
+  "homepage": "https://HribhavUX.github.io/hribhav-portfolio",
   "dependencies": {
     "@sanity/cli": "^3.3.1",
     "@sanity/client": "^4.0.1",
