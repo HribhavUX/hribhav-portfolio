@@ -10,9 +10,9 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={window.location.pathname || ''} >
         <Routes>
-          <Route path="/">
+          <Route exact path="/">
             <Route index element={<Home />} />
           </Route>
           <Route path="/about">
